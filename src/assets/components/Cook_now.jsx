@@ -6,12 +6,14 @@ function Cook_now(){
     const[dietaryRestrictions,setDietaryRestrictions]=useState('');
     const[recipe,setRecipe]=useState('');
 
-    const createRecipe= async ()=>{
+    const createRecipe = async () => {
         try {
-            const response = await fetch (`http://localhost:8080/recipe?ingredients=${ingredients}&cuisine=${cuisine}&dietaryRestrictions=${dietaryRestrictions}`);
-            const data=await response.text();
+            const response = await fetch (`http://ec2-13-48-43-215.eu-north-1.compute.amazonaws.com/recipe?ingredients=${ingredients}&cuisine=${cuisine}&dietaryRestrictions=${dietaryRestrictions}`);
+            const data = await response.text();
             console.log(data);
             setRecipe(data);
+
+            //Await-->Pauses the execution until the fetch promise resolves.
         } catch (error) {
             console.error("Error generating recipe:", error);
         }

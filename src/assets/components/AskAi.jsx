@@ -6,7 +6,7 @@ function AskAI(){
 
     const askAI=async()=>{
         try {
-            const response = await fetch (`http://localhost:8080/ask-ai?prompt=${prompt}`);
+            const response = await fetch (`http://ec2-13-48-43-215.eu-north-1.compute.amazonaws.com/ask-ai?prompt=${prompt}`);
             const data=await response.text();
             setChatRsponse(data);
         } catch (error) {

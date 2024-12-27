@@ -125,13 +125,13 @@ img:hover {
   box-sizing: border-box;
   word-wrap: break-word;
   overflow-y: auto;
-  font-size: calc(12px + 0.5vw);
+  font-size: 15px;
   line-height: 1.8;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #141212;
 }
 
 
