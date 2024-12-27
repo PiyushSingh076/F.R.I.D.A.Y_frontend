@@ -1,29 +1,45 @@
 import React, { useState } from "react";
 
-function AskAI(){
-    const[prompt,setPrompt]=useState('');
-    const[chatResponse,setChatRsponse]=useState('');
+function AskAI() {
+    const [prompt, setPrompt] = useState('');
+    const [chatResponse, setChatResponse] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const askAI=async()=>{
+    const askAI = async () => {
+        setLoading(true); // Show loading screen
         try {
-            const response = await fetch (`http://ec2-13-48-43-215.eu-north-1.compute.amazonaws.com/ask-ai?prompt=${prompt}`);
-            const data=await response.text();
-            setChatRsponse(data);
+            const response = await fetch(`http://localhost:8080/ask-ai?prompt=${prompt}`);
+            const data = await response.text();
+            setChatResponse(data);
         } catch (error) {
             console.error("Error generating answer:", error);
+            setChatResponse("An error occurred while generating the response."); // Handle error gracefully
+        } finally {
+            setLoading(false); // Hide loading screen
         }
-    }
+    };
+
     return (
-        <div>
-            <h2>Talk to NovaAI</h2>
-            <input type="text" 
-                    value={prompt}
-                    onChange={(e)=>setPrompt(e.target.value)}
-                    placeholder="Ask Nova anything"/>
-            <button onClick={askAI}>AskAI</button>
+        <div style={{ textAlign: "center" }}> {/* Center the entire content */}
+            <h2>Talk to AI</h2>
+            <input
+                type="text"
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+                placeholder="Ask Nova anything"
+            />
+            <button onClick={askAI} disabled={loading}>
+                {loading ? "Loading..." : "AskAI"}
+            </button>
 
             <div className="output">
-                <p>{chatResponse}</p>
+                {loading ? (
+                    <p style={{ textAlign: "center", margin: "20px 0", fontSize: "18px" }}>
+                        Loading...
+                    </p>
+                ) : (
+                    <p>{chatResponse}</p>
+                )}
             </div>
         </div>
     );
