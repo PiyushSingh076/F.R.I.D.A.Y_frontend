@@ -8,7 +8,7 @@ function AskAI() {
     const askAI = async () => {
         setLoading(true); // Show loading screen
         try {
-            const response = await fetch(`http://localhost:8080/ask-ai?prompt=${prompt}`);
+            const response = await fetch(`https://f-r-i-d-a-y-backend.vercel.app/ask-ai?prompt=${prompt}`);
             const data = await response.text();
             setChatResponse(data);
         } catch (error) {

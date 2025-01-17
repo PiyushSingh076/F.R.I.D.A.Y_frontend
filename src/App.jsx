@@ -16,7 +16,7 @@ function App() {
   return (
     
       <div className="App">
-        <h1 >NovaAI</h1>
+        <h1 >F.R.I.D.A.Y</h1>
         <button className={activeTab==='image-generator'?'active':''}
                           onClick={()=>handleTabChange('image-generator')}>Image Generator</button>
         {/* if clicked on a button change its classname and apply that css */}
