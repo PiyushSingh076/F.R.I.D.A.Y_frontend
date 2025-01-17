@@ -10,7 +10,7 @@ function ImageGenerator(){
 
     const generateImage=async()=>{
         try {
-            const response = await fetch (`http://localhost:8080/generate-image?prompt=${prompt}`);
+            const response = await fetch (`https://f-r-i-d-a-y-backend-zd5y.vercel.app/generate-image?prompt=${prompt}`);
             const urls=await response.json();
             setImageUrls(urls);
         } catch (error) {

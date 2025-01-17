@@ -10,7 +10,7 @@ function Cook_now() {
     const createRecipe = async () => {
         setLoading(true); // Show loading
         try {
-            const response = await fetch(`http://localhost:8080/recipe?ingredients=${ingredients}&cuisine=${cuisine}&dietaryRestrictions=${dietaryRestrictions}`);
+            const response = await fetch(`https://f-r-i-d-a-y-backend-zd5y.vercel.app/recipe?ingredients=${ingredients}&cuisine=${cuisine}&dietaryRestrictions=${dietaryRestrictions}`);
             const data = await response.text();
             console.log(data);
             setRecipe(data);
