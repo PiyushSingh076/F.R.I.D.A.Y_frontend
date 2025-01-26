@@ -1,4 +1,3 @@
-[
 # F.R.I.D.A.Y. Backend
 
 This is the backend application for the F.R.I.D.A.Y. system. It provides services for chat, image processing, recipe management, and more.
