@@ -1,4 +1,4 @@
-
+[
 # F.R.I.D.A.Y. Backend
 
 This is the backend application for the F.R.I.D.A.Y. system. It provides services for chat, image processing, recipe management, and more.
@@ -53,3 +53,4 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 For any questions or inquiries, please contact Piyush Singh at piyush1071singh@gmail.com.
 
+](https://github.com/PiyushSingh076/F.R.I.D.A.Y_frontend.git)
