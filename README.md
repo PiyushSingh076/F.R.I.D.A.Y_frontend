@@ -21,7 +21,7 @@ This is the backend application for the F.R.I.D.A.Y. system. It provides service
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PiyushSingh076/F.R.I.D.A.Y_backend.git
+   git clone https://github.com/PiyushSingh076/F.R.I.D.A.Y_frontend.git
    ```
 
 2. Navigate to the project directory:
@@ -53,4 +53,4 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 For any questions or inquiries, please contact Piyush Singh at piyush1071singh@gmail.com.
 
-](https://github.com/PiyushSingh076/F.R.I.D.A.Y_frontend.git)
+
